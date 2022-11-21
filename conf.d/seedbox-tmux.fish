@@ -28,7 +28,7 @@ set-option -s escape-time 0
 set-option -g history-limit 1000000
 
 # Mouse mode on
-set-option -ga terminal-overrides 'xterm*:smcup@:rmcup@'
+set-option -ga terminal-overrides \'xterm*:smcup@:rmcup@\'
 set-option -g mouse on
 
 # Set title
@@ -50,7 +50,7 @@ unbind r
 bind -n C-r source-file ~/.tmux.conf \; display "Config reloaded!"
 
 # Create new pane/window at currrent directory
-bind '"' split-window -c "#{pane_current_path}"
+bind \'"\' split-window -c "#{pane_current_path}"
 bind % split-window -h -c "#{pane_current_path}"
 bind c new-window -c "#{pane_current_path}"
 # better shortcuts
@@ -83,7 +83,7 @@ set-option -wga @pane_current_path     "pane_current_path"
 set-option -wga @pane_current_path "}"
 set-option -g @window_title "#{?#{!=:#{E:window_name},tmux},#{E:window_name},#{E:@pane_current_path}}"
 set-option -g status-interval 1
-set-option -g window-status-separator ''
+set-option -g window-status-separator \'\'
 set-option -g window-status-format " #[bold]#I#[none]:#{E:@window_title} "
 set-option -g window-status-current-format "#[reverse] #[bold]#I#[none,reverse]:#{E:@window_title} "
 
