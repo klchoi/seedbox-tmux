@@ -47,7 +47,7 @@ bind x kill-pane
 # Reload config
 set-option -g display-time 500
 unbind r
-bind -n C-r source-file ~/.tmux.conf \; display "Config reloaded!"
+bind -n C-r source-file $HOME/.config/tmux/tmux.conf \; display "Config reloaded!"
 
 # Create new pane/window at currrent directory
 bind \'"\' split-window -c "#{pane_current_path}"
