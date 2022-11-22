@@ -5,7 +5,7 @@ end
 
 function _seedbox_tmux_install
   mkdir -p $HOME/.local/bin
-  install-deb https://github.com/tmux/tmux/releases/download/3.1b/tmux-3.1b-x86_64.AppImage
+  dpkg -i https://github.com/tmux/tmux/releases/download/3.1b/tmux-3.1b-x86_64.AppImage
 end
 
 function _seedbox_tmux_config
