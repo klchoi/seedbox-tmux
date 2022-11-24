@@ -12,6 +12,8 @@ function _seedbox_tmux_config
   mkdir -p $HOME/.config/tmux
   echo '
 
+set-option -g @HOME "#(realpath $HOME)"
+
 ##########
 # OPTIONS
 ##########
@@ -73,7 +75,7 @@ bind -n C-k send-keys C-l \; send-keys -R \; clear-history
 
 set-option -wg automatic-rename-format "tmux"
 set-option -wg  @pane_current_path ""
-set-option -wga @pane_current_path "#{s|^$HOME|~|;"
+set-option -wga @pane_current_path "#{s|^#{@HOME}|~|;"
 set-option -wga @pane_current_path   "s|/|//|;"
 set-option -wga @pane_current_path   "s|/([^A-Za-z0-9/]*[A-Za-z0-9])[^/]*/|\\\\1/|;"
 set-option -wga @pane_current_path   "s|//|/|;"
