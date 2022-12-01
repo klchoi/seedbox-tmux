@@ -51,7 +51,7 @@ unbind r
 bind -n C-r source-file $HOME/.config/tmux/tmux.conf \; display "Config reloaded!"
 
 bind -n C-_ split-window -c "#{pane_current_path}"
-bind -n C-\ split-window -h -c "#{pane_current_path}"
+bind -n C-\\ split-window -h -c "#{pane_current_path}"
 bind -n C-t new-window -c "#{pane_current_path}"
 
 bind -n C-x kill-pane
